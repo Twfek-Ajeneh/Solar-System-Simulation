@@ -1,15 +1,22 @@
-## Intro
-Celestial Bodies Simulator is a web-based application that provides a 3D simulation of the solar system and other celestial objects. With realistic physics and stunning visuals, users can explore and interact with the planets, moons, asteroids, and comets in our solar system and beyond.
+Solar-System-Simulation
+===================================
 
-## Features
-* Realistic 3D simulation of celestial objects.
-* Explore the solar system and beyond.
-* View detailed information about each object.
-* Experience realistic physics and gravitational forces.
-* Customize the simulation with different settings and configurations.
-* 3D Collisions.
-* Real distance, time and mass scale.
-* Multiple camera options.
+Overview
+--------
+Solar-System-Simulation is a 3D web application that allows users to explore and interact with the solar system and other celestial objects. Built using the Three.js library, this simulation provides realistic physics and stunning visuals for an immersive experience. Users have the ability to manipulate various aspects of the simulation, including the axis of planets, their velocities, physics constants, camera perspectives, and even add new bodies to observe their interactions with the existing system.
+Additionally, the simulation offers features such as real-time information display and 3D collision detection for enhanced understanding and realism.
+
+Features
+--------
+- Realistic 3D Visualization: The simulation provides a visually stunning representation of the solar system and celestial objects. Each body is rendered with accurate sizes, colors, and textures for a realistic experience.
+- Interactive Exploration: Users can navigate and explore the simulation using intuitive controls. The mouse or touchpad can be used to rotate the solar system, zoom in or out, and focus on specific celestial bodies.
+- Customizable Axis and Velocities: The simulation allows users to edit and change the axis of planets, adjusting their orientations. Furthermore, the velocities of the bodies can be modified, providing flexibility in observing their movements and interactions.
+- Physics Constants: Users have the ability to change the constants of the physics engine used in the simulation. This feature allows for experimentation and observation of how alterations to these constants affect the behavior of the celestial bodies.
+- Multiple Camera Perspectives: The simulation offers more than one camera perspective, enabling users to view the solar system and celestial objects from different angles and viewpoints.
+- Helper Functions: Helper functions are available to assist users in understanding and interacting with the simulation. These functions provide additional information and guidance to enhance the user experience.
+- Add New Celestial Bodies: Users can add new bodies to the simulation, allowing them to observe the interactions and gravitational effects between the newly added bodies and the existing celestial objects.
+- Real-time Information Display: While the bodies are in motion, users can view real-time details and information about the bodies. This feature provides continuous updates on parameters such as position, velocity, mass, and other relevant data.
+- 3D Collision Detection: The simulation incorporates 3D collision detection, allowing users to observe and analyze the interactions and collisions between celestial bodies. This feature adds realism and further enhances the understanding of celestial mechanics.
 
 ## Technologies Used
 * Three JS
@@ -18,6 +25,10 @@ Celestial Bodies Simulator is a web-based application that provides a 3D simulat
 
 ### Note
 All Physics and Mathematics used were implemented and tested by us.
+
+Disclaimer
+----------
+Please note that the Solar-System-Simulation is intended for educational and entertainment purposes. While efforts have been made to ensure accuracy, the simulation may not represent real-world celestial mechanics with absolute precision.
 
 ## Release
 Feel free to try it from [Here](https://twfek-ajeneh.github.io/Solar-System-Simulation/).
