@@ -1,0 +1,357 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body{
+    overflow: hidden;
+}
+
+.webgl{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+
+
+
+/* start page style */
+
+.start-page{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../static/images/start-page.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.start-page p{
+    margin-top: 120px;
+    margin-bottom: 150px;
+    font-family: cursive;
+    /* -webkit-text-stroke: 6px #F8A53A; */
+    font-size: 110px;
+    color: white;
+}
+
+.start-page .start-button{
+    font-family: cursive;
+    width: 270px;
+    height: 60px;
+    font-size: 20px;
+    font-weight: bold;
+    background: white;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    border: none;
+    cursor: pointer;
+}
+
+.start-page .button-container{
+    position: relative;
+    overflow: hidden;
+}
+
+.start-page .button-container::before{
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    background: black;
+    opacity: .1;
+    width: 0%;
+    height: 0%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    -webkit-transform: translate(-50% , -50%);
+    -moz-transform: translate(-50% , -50%);
+    -ms-transform: translate(-50% , -50%);
+    -o-transform: translate(-50% , -50%);
+}
+
+.start-page .button-container:hover::before{
+    width: 200%;
+    height: 200%;
+}
+
+
+/* control panel style */
+.guify-bar-button{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.guify-container *{
+    font-family: cursive !important;
+}
+
+.guify-panel-container-scrollable{
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+}
+
+
+/* information panel Style */
+
+.information-panel{
+    width: 430px;
+    height: 100vh;
+    background-color: #000000bf;
+    color: white;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: -500px;
+    top: 0;
+    z-index: 1;
+    font-family: cursive;
+    border-right: 1px solid white;
+    transition: 0.5s;
+}
+
+.information-panel .planet-name{
+    font-size: 40px;
+    padding: 100px 0 0 20px;
+    color: #2196f3;
+}
+
+.information-panel .material{
+    margin-bottom: 70px;
+    margin-left: 20px;
+}
+
+.information-panel .content{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 15px;
+    justify-content: space-between;
+}
+
+.information-panel .content div{
+    margin-bottom: 70px;
+}
+
+.information-panel .content .X{
+    width: 120px;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+    position: relative;
+    font-size: 20px;
+    color: #2196f3;
+}
+
+.information-panel .content .X::before{
+    content: 'X-Axis';
+    position: absolute;
+    font-size: 12px;
+    bottom: -20px;
+    left: 0;
+    color: white;
+}
+.information-panel .content .Y{
+    width: 120px;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+    position: relative;
+    font-size: 20px;
+    color: #2196f3;
+}
+
+.information-panel .content .Y::before{
+    content: 'Y-Axis';
+    position: absolute;
+    font-size: 12px;
+    bottom: -20px;
+    left: 0;
+    color: white;
+}
+.information-panel .content .Z{
+    width: 120px;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+    position: relative;
+    font-size: 20px;
+    color: #2196f3;
+}
+
+.information-panel .content .Z::before{
+    content: 'Z-Axis';
+    position: absolute;
+    font-size: 12px;
+    bottom: -20px;
+    left: 0;
+    color: white;
+}
+
+/*Speed*/
+.information-panel .content .speed{
+    width: 190px;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+    position: relative;
+    font-size: 20px;
+    color: #2196f3;
+}
+.information-panel .content .speed::after{
+    content: 'Km/s';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 13px;
+    color: white;
+}
+.information-panel .content .speed::before{
+    content: 'Average Speed';
+    position: absolute;
+    font-size: 12px;
+    bottom: -20px;
+    left: 0;
+    color: white;
+}
+
+/* Au */
+.information-panel .content .AU{
+    width: 190px;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+    position: relative;
+    font-size: 20px;
+    color: #2196f3;
+}
+.information-panel .content .AU::after{
+    content: 'AU';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 13px;
+    color: white;
+}
+.information-panel .content .AU::before{
+    content: 'Average Distance From Sun';
+    position: absolute;
+    font-size: 12px;
+    bottom: -20px;
+    left: 0;
+    color: white;
+}
+
+/* rotationalSpeed */
+.information-panel .content .rotationalSpeed{
+    width: 190px;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+    position: relative;
+    font-size: 20px;
+    color: #2196f3;
+}
+.information-panel .content .rotationalSpeed::after{
+    content: 'rotation per Day';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 13px;
+    color: white;
+} 
+.information-panel .content .rotationalSpeed::before{
+    content: 'Rotational Speed';
+    position: absolute;
+    font-size: 12px;
+    bottom: -20px;
+    left: 0;
+    color: white;
+}
+
+/* radius */
+.information-panel .content .radius{
+    width: 190px;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+    position: relative;
+    font-size: 20px;
+    color: #2196f3;
+}
+.information-panel .content .radius::after{
+    content: 'Earth Radius';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 13px;
+    color: white;
+}
+.information-panel .content .radius::before{
+    content: 'Radius';
+    position: absolute;
+    font-size: 12px;
+    bottom: -20px;
+    left: 0;
+    color: white;
+}
+
+/* Mass */
+.information-panel .content .mass{
+    width: 300px;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+    position: relative;
+    font-size: 20px;
+    color: #2196f3;
+}
+.information-panel .content .mass::after{
+    content: 'Kg';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 13px;
+    color: white;
+}
+.information-panel .content .mass::before{
+    content: 'Mass';
+    position: absolute;
+    font-size: 12px;
+    bottom: -20px;
+    left: 0;
+    color: white;
+}
+
+.information-panel .exit{
+    background-color: transparent;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    right: 15px;
+    top: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.information-panel .exit::before{
+    content: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 118 111' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M118 55.4992C118 62.7824 112.673 68.6854 106.109 68.6854H45.5258L63.3857 88.4867C68.031 93.6381 68.031 101.985 63.3857 107.136C61.063 109.712 58.019 111 54.975 111C51.9309 111 48.8948 109.712 46.5722 107.141L0 55.4948L46.5523 3.86192C51.2016 -1.2895 58.7245 -1.28511 63.3699 3.86192C68.0152 9.01334 68.0152 17.3602 63.3699 22.5116L45.5139 42.3173H106.113C112.673 42.313 118 48.216 118 55.4992Z' fill='white'/%3E%3C/svg%3E%0A");
+    margin-top: 30px;
+}
